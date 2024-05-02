@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>URL Shortener</h1>
+        <form id="url-form" onsubmit="handleFormSubmit(event)">
+            <label for="long-url">Enter a long URL</label><br><br>
+            <input type="text" id="long-url" name="long-url"><br><br>
+            <input type="submit" value="shorten URL">
+        </form>
+        <p>Shortened URL: <span id="Shortended-url"></span></p>
+
+        <h2>Decode Shortened URL</h2>
+        <label for="short-url">Enter the Shortened URL:</label><br>
+        <input type="text" id="short-url" name="short-url">
+        <button onclick="getOriginalURL()">Get Original URL</button>
+        <p>Original URL: <span id="original-url"></span></p>
+    </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
